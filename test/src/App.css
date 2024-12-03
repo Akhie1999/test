@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.App-nav a:hover {
+  text-decoration: underline;
+}
+
+.App-section {
+  padding: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+.App-section h2 {
+  color: #333;
+}
+
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+}
