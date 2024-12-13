@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
+import Hotjar from "@hotjar/browser";
 
-function App() {
+const App = () => {
+  const siteId = 5241159; // Your Hotjar Site ID
+  const hotjarVersion = 6; // Hotjar Version
+
+  useEffect(() => {
+    console.log("Initializing Hotjar...");
+    try {
+      Hotjar.init(siteId, hotjarVersion);
+      if (Hotjar.isInitialized()) {
+        console.log("Hotjar initialized successfully.");
+        Hotjar.event("app_loaded"); // Example: Log an event
+      } else {
+        console.error("Hotjar failed to initialize.");
+      }
+    } catch (error) {
+      console.error("Error initializing Hotjar:", error);
+    }
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -39,6 +58,6 @@ function App() {
       </footer>
     </div>
   );
-}
+};
 
 export default App;
