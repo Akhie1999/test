@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Hotjar from "@hotjar/browser";
 
@@ -6,46 +6,23 @@ const App = () => {
   const siteId = 5241159; // Your Hotjar Site ID
   const hotjarVersion = 6; // Hotjar Version
 
-  const [isBannerVisible, setIsBannerVisible] = useState(true);
-
   useEffect(() => {
-    if (localStorage.getItem("hotjarConsent") === "accepted") {
-      // If user has already accepted, initialize Hotjar
+    console.log("Initializing Hotjar...");
+    try {
       Hotjar.init(siteId, hotjarVersion);
-      console.log("Hotjar initialized.");
+      if (Hotjar.isInitialized()) {
+        console.log("Hotjar initialized successfully.");
+        Hotjar.event("app_loaded"); // Example: Log an event
+      } else {
+        console.error("Hotjar failed to initialize.");
+      }
+    } catch (error) {
+      console.error("Error initializing Hotjar:", error);
     }
   }, []);
 
-  const handleAccept = () => {
-    // Save user consent in localStorage
-    localStorage.setItem("hotjarConsent", "accepted");
-
-    // Initialize Hotjar
-    Hotjar.init(siteId, hotjarVersion);
-    console.log("Hotjar initialized after acceptance.");
-    setIsBannerVisible(false);
-  };
-
-  const handleDecline = () => {
-    // Save user decision in localStorage
-    localStorage.setItem("hotjarConsent", "declined");
-    setIsBannerVisible(false);
-  };
-
   return (
     <div className="App">
-      {isBannerVisible && (
-        <div className="cookie-banner">
-          <p>
-            We use cookies to analyze user behavior and improve your experience.
-            By accepting, you consent to Hotjar tracking.{" "}
-            <a href="/privacy-policy">Learn more</a>.
-          </p>
-          <button onClick={handleAccept}>Accept</button>
-          <button onClick={handleDecline}>Decline</button>
-        </div>
-      )}
-
       <header className="App-header">
         <h1>Welcome to My Website</h1>
         <nav className="App-nav">
