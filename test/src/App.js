@@ -3,7 +3,7 @@ import "./App.css";
 import Hotjar from "@hotjar/browser";
 
 const App = () => {
-  const siteId = 5241159; // Your Hotjar Site ID
+  const siteId = 5241218; // Your Hotjar Site ID
   const hotjarVersion = 6; // Hotjar Version
 
   useEffect(() => {
