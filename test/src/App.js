@@ -1,30 +1,11 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import Hotjar from "@hotjar/browser";
 
 const App = () => {
-  const siteId = 5241218; // Your Hotjar Site ID
-  const hotjarVersion = 6; // Hotjar Version
-
-  useEffect(() => {
-    console.log("Initializing Hotjar...");
-    try {
-      Hotjar.init(siteId, hotjarVersion);
-      if (Hotjar.isInitialized()) {
-        console.log("Hotjar initialized successfully.");
-        Hotjar.event("app_loaded"); // Example: Log an event
-      } else {
-        console.error("Hotjar failed to initialize.");
-      }
-    } catch (error) {
-      console.error("Error initializing Hotjar:", error);
-    }
-  }, []);
-
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to My Website</h1>
+        <h1>Free syria</h1>
         <nav className="App-nav">
           <a href="#home">Home</a>
           <a href="#about">About</a>
