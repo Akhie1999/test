@@ -3,8 +3,8 @@ import "./App.css";
 import Hotjar from "@hotjar/browser";
 
 const App = () => {
-  const siteId = 5241218; // Your Hotjar Site ID
-  const hotjarVersion = 6; // Hotjar Version
+  const siteId = 5241159;
+  const hotjarVersion = 6;
 
   useEffect(() => {
     console.log("Initializing Hotjar...");
