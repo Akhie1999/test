@@ -27,11 +27,6 @@
         border-color: #eb672a !important;
       }
 
-      #CybotCookiebotDialogBodyButtonAccept {
-        background-color: #3b8b87 !important;
-        border-color: #3b8b87 !important;
-      }
-
       /* Toggle switch styling */
       .CybotCookiebotDialogBodyLevelButtonSlider {
         background-color: gray !important;
@@ -45,6 +40,31 @@
       /* Toggle switch border when active */
       .CybotCookiebotDialogBodyLevelButtonSlider::before {
         border-color: #eb672a !important;
+      }
+
+      #CybotCookiebotDialogNav {
+        background-color: #5f9ea0 !important;
+        border-bottom-color: #5f9ea0 !important;
+      }
+
+      /* Active tab indicator */
+      #CybotCookiebotDialogNavList .CybotCookiebotDialogNavItemLink.active {
+        border-bottom-color: #5f9ea0 !important;
+      }
+
+      /* Middle button - using the correct selector */
+      #CybotCookiebotDialogBodyLevelButtonCustomize,
+      .CybotCookiebotDialogBodyButton.CybotCookiebotDialogBodyLevelButtonCustomize {
+        background-color: transparent !important;
+        border: 2px solid #5f9ea0 !important;
+        color: #5f9ea0 !important;
+      }
+
+      /* Middle button hover state */
+      #CybotCookiebotDialogBodyLevelButtonCustomize:hover,
+      .CybotCookiebotDialogBodyButton.CybotCookiebotDialogBodyLevelButtonCustomize:hover {
+        background-color: #5f9ea0 !important;
+        color: #ffffff !important;
       }
     </style>
   </head>
