@@ -44,24 +44,16 @@
       .CybotCookiebotDialogBodyLevelButtonSlider::before {
         border-color: #eb672a !important;
       }
-      #CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink.active {
-        border-bottom-color: #5f9ea0 !important; /* Replace with your desired color */
+      /* If the active state is indicated by a specific class (e.g., .active) */
+      #CybotCookiebotDialogNav.active {
+        background-color: #eb672a !important; /* Replace 'your-new-color' with your desired color */
+        color: #eb672a !important; /* Optional: Replace with the desired text color */
       }
 
-      /* Change the blue accent color for the active tab */
-      #CybotCookiebotDialogTabContent
-        .CybotCookiebotDialogBodyLevelButtonSlider,
-      #CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink.active {
-        background-color: #5f9ea0 !important; /* Replace with your desired color */
-      }
-
-      /* Change the blue highlight color when tab is selected */
-      #CybotCookiebotDialogNavList .CybotCookiebotDialogNavItem {
-        border-bottom-color: transparent !important;
-      }
-
-      #CybotCookiebotDialogNavList .CybotCookiebotDialogNavItem.active {
-        border-bottom-color: #5f9ea0 !important; /* Replace with your desired color */
+      /* If the active state is triggered by the :active pseudo-class */
+      #CybotCookiebotDialogNav:active {
+        background-color: #eb672a !important; /* Replace 'your-new-color' with your desired color */
+        color: #eb672a !important; /* Optional: Replace witheplace with the desired text color */
       }
     </style>
   </head>
