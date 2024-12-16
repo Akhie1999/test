@@ -11,10 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.CybotCookiebotDialog {
-  background-color: yellow; /* Wijzig achtergrondkleur */
-}
-.CybotCookiebotDialogBodyButton {
-  color: red; /* Wijzig tekstkleur */
-  background-color: green; /* Wijzig knopkleur */
-}

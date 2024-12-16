@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React App</title>
-    <!-- Cookiebot Script -->
-    <script
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="64138b24-59cf-4e36-891f-cd08c83ba9f7"
-      type="text/javascript"
-      async
-    ></script>
-    <link rel="stylesheet" href="index.css" />
+    <title>Cookiebot Banner Customization</title>
+    <style>
+      /* Cookiebot Banner Styles */
+      .cookiebot-banner {
+        background-color: red !important; /* Blue background */
+      }
+
+      .cookiebot-text {
+        color: yellow !important; /* White text */
+      }
+
+      /* Customize button styles (example) */
+      .cookiebot-button {
+        background-color: #28a745 !important; /* Green button background */
+        color: white !important; /* White button text */
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <script
+      type="text/javascript"
+      src="//consent.cookiebot.com/uc.js"
+      data-cbid="64138b24-59cf-4e36-891f-cd08c83ba9f7"
+      data-cblang="en"
+    ></script>
   </body>
 </html>
