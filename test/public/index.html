@@ -19,24 +19,26 @@
       #CybotCookiebotDialog {
         background-color: white !important;
       }
-
-      /* Change the color of the button */
-      #CybotCookiebotDialogBodyButton {
-        background-color: #ed7b45 !important;
-        color: #fff !important;
-        border-radius: 5px; /* optional, to round the corners */
-      }
-
       /* Change the text color */
       #CybotCookiebotDialogBodyText,
       #CybotCookiebotDialogBody {
         color: #3b8b87 !important;
-        background-color: red !important;
       }
 
-      /* Change the button hover color */
-      #CybotCookiebotDialogBodyButton {
-        background-color: orange !important; /* Darker blue on hover */
+      #CybotCookiebotDialogBodyButton,
+      .cookiebot-button {
+        background-color: #ed7b45 !important; /* Button background color */
+        color: #fff !important; /* Button text color */
+        border-radius: 5px !important; /* Optional: Round the corners */
+        padding: 10px 20px; /* Optional: Padding to make button larger */
+        font-size: 16px; /* Optional: Font size */
+        border: none; /* Remove border */
+      }
+
+      /* Button hover effect */
+      #CybotCookiebotDialogBodyButton:hover,
+      .cookiebot-button:hover {
+        background-color: orange !important; /* Darker color on hover */
       }
     </style>
   </head>
