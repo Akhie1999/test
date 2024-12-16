@@ -15,34 +15,20 @@
 
     <!-- Custom CSS for Cookiebot -->
     <style>
-      /* Target the Cookiebot buttons */
-
-      /* "Weigeren" button */
-      #CybotCookiebotDialogBodyButtonDecline {
-        background-color: #ff4b4b !important; /* Red background */
+      /* Target all buttons inside the Cookiebot banner */
+      #CybotCookiebotDialog button {
+        background-color: #007bff !important; /* Blue background for all buttons */
         color: #ffffff !important; /* White text */
         border: none !important;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
       }
 
-      /* "Selectie toestaan" button */
-      #CybotCookiebotDialogBodyButtonCustomize {
-        background-color: #ffcc00 !important; /* Yellow background */
-        color: #000000 !important; /* Black text */
-        border: none !important;
-      }
-
-      /* "Alles toestaan" button */
-      #CybotCookiebotDialogBodyButtonAccept {
-        background-color: #4caf50 !important; /* Green background */
-        color: #ffffff !important; /* White text */
-        border: none !important;
-      }
-
-      /* Add hover effects for all buttons */
-      #CybotCookiebotDialogBodyButtonDecline:hover,
-      #CybotCookiebotDialogBodyButtonCustomize:hover,
-      #CybotCookiebotDialogBodyButtonAccept:hover {
-        opacity: 0.9;
+      /* Hover effect for all buttons */
+      #CybotCookiebotDialog button:hover {
+        background-color: #0056b3 !important; /* Darker blue on hover */
         cursor: pointer;
       }
     </style>
