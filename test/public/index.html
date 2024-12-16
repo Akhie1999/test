@@ -14,7 +14,36 @@
     ></script>
 
     <!-- Custom CSS for Cookiebot -->
-    <style></style>
+    <style>
+      /* Change the color of the "Weigeren" button */
+      button[title="Weigeren"] {
+        background-color: #ff4b4b !important; /* Red background */
+        color: #ffffff !important; /* White text */
+        border: none !important;
+      }
+
+      /* Change the color of the "Selectie toestaan" button */
+      button[title="Selectie toestaan"] {
+        background-color: #ffcc00 !important; /* Yellow background */
+        color: #000000 !important; /* Black text */
+        border: none !important;
+      }
+
+      /* Change the color of the "Alles toestaan" button */
+      button[title="Alles toestaan"] {
+        background-color: #4caf50 !important; /* Green background */
+        color: #ffffff !important; /* White text */
+        border: none !important;
+      }
+
+      /* Optional: Add hover effect for buttons */
+      button[title="Weigeren"]:hover,
+      button[title="Selectie toestaan"]:hover,
+      button[title="Alles toestaan"]:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
