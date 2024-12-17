@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import Hotjar from "@hotjar/browser";
+import Clarity from "@microsoft/clarity";
 
 const App = () => {
-  const siteId = 5241159;
+  const siteId = 5241159; // Hotjar Site ID
   const hotjarVersion = 6;
 
   useEffect(() => {
+    // Hotjar Initialisatie
     console.log("Initializing Hotjar...");
     try {
       Hotjar.init(siteId, hotjarVersion);
@@ -18,6 +20,26 @@ const App = () => {
       }
     } catch (error) {
       console.error("Error initializing Hotjar:", error);
+    }
+
+    // Microsoft Clarity Initialisatie
+    console.log("Initializing Microsoft Clarity...");
+    try {
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "peh2873u9f"); // Replace with your Project ID
+      console.log("Microsoft Clarity initialized successfully.");
+    } catch (error) {
+      console.error("Error initializing Clarity:", error);
     }
   }, []);
 
