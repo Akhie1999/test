@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import Hotjar from "@hotjar/browser";
-import Clarity from "@microsoft/clarity";
 
 const App = () => {
   const siteId = 5241159; // Hotjar Site ID
