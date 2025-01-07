@@ -49,19 +49,38 @@
       /* Default style for the navigation links */
 
       /* Optional: Hover effect */
-      #CybotCookiebotDialogNav a:hover {
-        color: #ff5733 !important; /* Replace with your desired hover color */
+      #CybotCookiebotDialogNav {
+        display: flex;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        padding: 0;
       }
+
       #CybotCookiebotDialogNav a {
+        text-decoration: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+        position: relative;
+        cursor: pointer;
+        transition: color 0.3s ease;
         border-bottom: 1px solid gray !important;
       }
-      #CybotCookiebotDialogNav a:focus {
+
+      /* Default active tab (Consent) */
+      #CybotCookiebotDialogNav a.active {
         color: #ff5733 !important;
-        border-bottom: 2px solid #ff5733 !important;
+        border-bottom: 3px solid #ff5733 !important;
+        font-weight: bold;
       }
+
+      /* Hover and focus effect */
+      #CybotCookiebotDialogNav a:hover,
       #CybotCookiebotDialogNav a:focus {
         color: #ff5733 !important;
         border-bottom: 2px solid #ff5733 !important;
+        outline: none;
       }
     </style>
   </head>
