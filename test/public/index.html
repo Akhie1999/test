@@ -47,34 +47,21 @@
       }
       /* Change the active tab underline color */
       /* Default style for the navigation links */
-      #CybotCookiebotDialogNav {
-        display: flex;
-        justify-content: start;
-        border-bottom: 1px solid green;
-      }
 
+      /* Optional: Hover effect */
+      #CybotCookiebotDialogNav a:hover {
+        color: #ff5733 !important; /* Replace with your desired hover color */
+      }
       #CybotCookiebotDialogNav a {
-        text-decoration: none;
-        padding: 15px 20px;
-        font-size: 16px;
-        font-weight: 500;
-        color: red;
+        border-bottom: 1px solid gray !important;
       }
-
-      #CybotCookiebotDialogNav a.active {
-        color: #eb672a; /* Blue for active tab */
-        font-weight: 600;
-        position: relative;
+      #CybotCookiebotDialogNav a:focus {
+        color: #ff5733 !important;
+        border-bottom: 2px solid #ff5733 !important;
       }
-
-      #CybotCookiebotDialogNav a.active::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 3px;
-        background-color: teal; /* Blue underline */
+      #CybotCookiebotDialogNav a:focus {
+        color: #ff5733 !important;
+        border-bottom: 2px solid #ff5733 !important;
       }
     </style>
   </head>
