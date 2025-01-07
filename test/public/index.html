@@ -49,19 +49,61 @@
       /* Default style for the navigation links */
 
       /* Optional: Hover effect */
-      #CybotCookiebotDialogNav a:hover {
-        color: #ff5733 !important; /* Replace with your desired hover color */
+      /* Navigation container */
+      #CybotCookiebotDialogNav {
+        display: flex;
+        border-bottom: 2px solid #e0e0e0; /* Light gray border */
+        margin: 0;
+        padding: 0;
+        list-style: none;
       }
+
+      /* Navigation links */
       #CybotCookiebotDialogNav a {
-        border-bottom: 1px solid gray !important;
+        text-decoration: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #000; /* Default black text */
+        position: relative;
+        cursor: pointer;
+        transition: color 0.3s ease;
       }
-      #CybotCookiebotDialogNav a:focus {
-        color: #ff5733 !important;
-        border-bottom: 2px solid #ff5733 !important;
+
+      /* Hover effect */
+      #CybotCookiebotDialogNav a:hover {
+        color: #ff5733; /* Orange on hover */
       }
+
+      /* Focus effect for accessibility */
       #CybotCookiebotDialogNav a:focus {
-        color: #ff5733 !important;
-        border-bottom: 2px solid #ff5733 !important;
+        outline: none;
+        color: #ff5733; /* Orange on focus */
+        font-weight: bold;
+      }
+
+      /* Active tab styling */
+      #CybotCookiebotDialogNav a.active {
+        color: #ff5733; /* Orange for active tab */
+        font-weight: bold;
+      }
+
+      /* Active underline */
+      #CybotCookiebotDialogNav a.active::after,
+      #CybotCookiebotDialogNav a:focus::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 3px;
+        background-color: #ff5733; /* Orange underline */
+      }
+
+      /* Focus visible for accessibility */
+      #CybotCookiebotDialogNav a:focus-visible {
+        outline: 2px solid #ff5733; /* Orange focus ring */
+        border-radius: 3px;
       }
     </style>
   </head>
